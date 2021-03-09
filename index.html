@@ -10,10 +10,11 @@
 <body>
     <section class="parallax-container">
         <div class="parallax-layer layer-background"></div>
-        <div class="parallax-layer layer-1"></div>
-        <div class="parallax-layer layer-2"></div>
-        <div class="parallax-layer layer-3 layer-man"></div>
         <div class="parallax-layer layer-4"></div>
+        <div class="parallax-layer layer-3"></div>
+        <div class="parallax-layer layer-2"></div>
+        <div class="parallax-layer layer-man"></div>
+        <div class="parallax-layer layer-1"></div>
     </section>
     <section class="text text1">
         <h1>Parallax Effect</h1>
@@ -25,5 +26,11 @@
         <p>Lorem ipsum</p>
         <p>Creating parallax effect</p>
     </section>
+    <script>
+        let el = document.getElementsByClassName("layer-man")[0];
+        window.onscroll = () => {
+            el.style.transform = "translateX(-" + window.scrollY + "px)";
+        }
+    </script>
 </body>
 </html>
