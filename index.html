@@ -29,8 +29,9 @@
     <script>
         let elems = document.getElementsByClassName("parallax-layer");
         window.onscroll = () => {
+            let ratio = (window.innerWidth/window.innerHeight) * 2;
             for (let el of elems) {
-                if (el.classList.contains("layer-man"))             el.style.transform = "translateX(-" + window.scrollY + "px) translateY(-" + window.scrollY + "px)";
+                if (el.classList.contains("layer-man"))             el.style.transform = "translateX(-" + window.scrollY/ratio  + "px) translateY(-" + window.scrollY + "px)";
                 else if (el.classList.contains("layer-3"))          el.style.transform = "translateY(-" + window.scrollY/2 + "px)";
                 else if (el.classList.contains("layer-background")) el.style.transform = "translateY(-" + window.scrollY/3 + "px)";
                 else el.style.transform = "translateY(-" + window.scrollY + "px)";
